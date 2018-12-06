@@ -1,9 +1,9 @@
 ---
 layout: post
 title: hello
-categories: test
+categories: [other]
 published: true
-tags: test
+tags: [other]
 ---
 
 ## Hello
