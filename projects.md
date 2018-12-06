@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Projects
+title: 项目分类
 permalink: /projects/
 ---
 

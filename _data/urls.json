@@ -11,18 +11,13 @@
     "icon": "fa-comments"
   },
   {
-    "text": "项目",
-    "url": "/projects",
-    "icon": "fa-desktop"
-  },
-  {
     "text": "简历",
     "url": "javascript:alert('待定');",
     "icon": "fa-graduation-cap"
   },
   {
     "text": "Github",
-    "url": "/#",
+    "url": "https://www.baidu.com",
     "icon": "fa-github"
   }
 ]
