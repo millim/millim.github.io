@@ -3,7 +3,7 @@ layout: post
 title: hello
 categories: [other]
 published: true
-tags: [other]
+tags: [杂谈]
 ---
 
 ## Hello
