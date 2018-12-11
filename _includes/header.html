@@ -31,7 +31,7 @@
             </div>
             <p class="info">
               {% if page.date %}
-                <span class="time">{{ page.date | date_to_string }}</span>
+                <span class="time">{{ page.date | date: "%Y年%m月%d日" }}</span>
               {% endif %}
               {% if page.categories.size > 0 %}
                 <span class="categories">
