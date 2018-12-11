@@ -220,3 +220,6 @@ footer {
     position: absolute;
     right: 12px;
 }
+body {
+    font: 12px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+}

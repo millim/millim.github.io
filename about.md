@@ -16,3 +16,13 @@ permalink: /about/
 我当前项目使用的主题项目在这里: [github.com/ashutosh2k12/hcz-jekyll-blog](https://github.com/ashutosh2k12/hcz-jekyll-blog)
 
 你也可以在这里获取关于 Jekyll 的源码内容: [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+
+关于这里的图标，大部分来自: [https://fontawesome.com/icons](https://fontawesome.com/icons)。(小部分？小部分自己画的)
+
+然后是本项目地址,[https://github.com/millim](https://github.com/millim)。
+
+### 联系方式
+
+qq: 左上角
+邮箱1: <oblivion.millim@gmail.com>
+邮箱2: <237092624@qq.com>

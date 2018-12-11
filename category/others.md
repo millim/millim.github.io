@@ -1,6 +1,6 @@
 ---
 layout: posts_by_category
-categories: others
-title: Others
-permalink: /category/others
+categories: 杂谈
+title: 杂谈
+permalink: /category/杂谈
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: hello
-categories: [other]
+categories: [杂谈]
 published: true
 tags: [杂谈]
 ---
