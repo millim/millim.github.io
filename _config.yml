@@ -1,5 +1,5 @@
-title: Millim学习记录
-description: 一切乱七八糟的东西
+title: 咖喱没有土豆
+description: 开心的时候写一下，没事的时候写一下，怕忘记的时候写一下
 author: Millim
 about: Level 0的开发者
 # baseurl: "/"
@@ -13,3 +13,4 @@ per_page: 1
 paginate_path: "/page:num/"
 markdown: kramdown
 plugins: [jekyll-paginate, jekyll-gist]
+version: 1.0.0
