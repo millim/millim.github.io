@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 关于此项目
+title: 项目信息
 permalink: /about/
 ---
 
