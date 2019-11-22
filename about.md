@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 项目信息
+title: 博客信息
 permalink: /about/
 ---
 
@@ -11,9 +11,7 @@ permalink: /about/
 
 ### 此项目使用介绍
 ---
-此项目采用了 Jekyll 的主题. 你可以在这里找到更多关于 Jekyll 定制的主题并使用它。[jekyllrb.com](http://jekyllrb.com/)
-
-我当前项目使用的主题项目在这里: [https://github.com/poole/lanyon](https://github.com/poole/lanyon)
+本blog修改自主题: [https://github.com/poole/lanyon](https://github.com/poole/lanyon)
 
 你也可以在这里获取关于 Jekyll 的源码内容: [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
 
