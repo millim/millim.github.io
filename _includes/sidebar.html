@@ -29,7 +29,7 @@
 
   <div>
     <ol style="list-style:none;">
-    {% for category in site.categories %}
+    {% for category in site.categories | sort:"size" %}
       <li><a href="/categories/?categorie={{ category | first }}">{{ category | first }} - {{ category | last | size }}</a></li>  
     {% endfor %}
     </ol>

@@ -15,10 +15,10 @@ title: 文章分类
 
   function isOnlyShow(name){
       if (curTag == null){
-        return
+        return $("#group-" + name).show()
       }
-      if (curTag != name){
-        $("#group-"+name).hide()
+      if (curTag == name){
+        $("#group-"+name).show()
       }
   }
   var from = getQueryString("from");
@@ -26,7 +26,7 @@ title: 文章分类
 <div id="archives">
   {% for category in site.categories %}
   {% capture category_name %}{{ category | first }}{% endcapture %}
-  <div class="archive-group" id="group-{{ category_name | slugize}}">
+  <div class="archive-group" style="display: none;" id="group-{{ category_name | slugize}}">
     <div id="#{{ category_name | slugize }}"></div>
     <p></p>
     <h3 class="category-head">{{ category_name }}</h3>
