@@ -1,29 +1,29 @@
 ---
 layout: page
-permalink: /categories/
-title: 文章分类
+permalink: /tags/
+title: 标签分类
 ---
 
 <script type="text/javascript">
-  var curTag = decodeURI(getQueryString("categorie"))
+  var curTag = decodeURI(getQueryString("tag"))
   var isOnlyShow = getShowObj(curTag)
 </script>
 <div id="archives">
-  {% for category in site.categories %}
-  {% capture category_name %}{{ category | first }}{% endcapture %}
-  <div class="archive-group" style="display: none;" id="group-{{ category_name | slugize}}">
+  {% for tag in site.tags %}
+  {% capture tag_name %}{{ tag | first }}{% endcapture %}
+  <div class="archive-group" style="display: none;" id="group-{{ tag_name | slugize}}">
     <div id="#{{ category_name | slugize }}"></div>
     <p></p>
-    <h3 class="category-head">{{ category_name }}</h3>
+    <h3 class="category-head">{{ tag_name }}</h3>
     <a name="{{ category_name | slugize }}"></a>
-    {% for post in site.categories[category_name] %}
+    {% for post in site.tags[tag_name] %}
     <article class="archive-item">
       <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
     </article>
     {% endfor %}
   </div>
   <script type="text/javascript">
-  isOnlyShow("{{ category_name | slugize  }}")
+  isOnlyShow("{{ tag_name | slugize  }}")
   </script>
   {% endfor %}
   
