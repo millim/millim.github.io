@@ -11,11 +11,11 @@ function getQueryString(name) {
 
 function getShowObj(curTag){
   return function isOnlyShow(name) {
-    if (curTag == null) {
-      return $("#group-" + name).show()
+    if (curTag === "false") {
+      $("#group-" + name).show()
+      return
     }
     if (curTag == name) {
-
       $("#group-" + name).show()
     }
   }

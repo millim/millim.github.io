@@ -34,7 +34,6 @@ permalink: /resume/
 一般
 * Node
 * Python
-* Java
 
 ## 其他技术
 * Html & CSS
@@ -67,6 +66,7 @@ permalink: /resume/
 > * 基于ES的统计维护平台的搭建,规范制定,开发,以及数据采集系统
 > * 后端部分业务的技术调研与架构设计
 > * 基于C++的通过机器学习进行Opencv识别
+> * 框架设计与调研
 >
 
 ---

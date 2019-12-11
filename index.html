@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 这里的东西基本不用信
+title: 首页
 ---
 
 <div class="well">
@@ -29,18 +29,15 @@ title: 这里的东西基本不用信
     <li class="previous">
       <a
         href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-        >&laquo;</a
-      >
+        >&laquo;</a>
     </li>
     {% else %}
-    <li class="previous disabled"><span aria-hidden="true">&laquo;</span></li>
+    <li class="previous disabled noaction"><span aria-hidden="true">&laquo;</span></li>
     {% endif %}
-
-    <li><a href="/">首页</a></li>
 
     {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
     <li class="active">
-      <a>{{ page }}<span class="sr-only">(current)</span></a>
+      <a class="noc">{{ page }}</a>
     </li>
     {% elsif page == 1 %}
     <li>
@@ -54,8 +51,7 @@ title: 这里的东西基本不用信
       >
     </li>
     {% endif %} {% endfor %}
-
-    <li><a href="/page{{ paginator.total_pages }}/">末页</a></li>
+  
 
     {% if paginator.next_page %}
     <li class="next">
@@ -65,9 +61,43 @@ title: 这里的东西基本不用信
       >
     </li>
     {% else %}
-    <li class="next disabled"><span>&raquo;</span></li>
+    <li class="next disabled noaction"><span>&raquo;</span></li>
     {% endif %}
   </ul>
   {% endif %}
 </div>
+<style type="text/css">
+  .pager {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  .pager > li {
+    display: inline;
+    text-decoration: none;
+  }
+
+  .pager > li a {
+    color: black;
+    float: left;
+    margin-left: 3px;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+
+  .noaction{
+    float: left;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+
+  .active > a {
+    border-radius: 5px;
+    background-color: #ebe9e9;
+  }
+  li > a:hover:not(.noc) {
+    border-radius: 5px;
+    background-color: #ddd;
+  }
+</style>
 <!-- end #home -->
