@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require "fileutils"
+Dir.each_child('./_drafts') do |filename|
+  new_file_name = Time.now.strftime('%Y-%m-%d') + '-' + filename
+  FileUtils.mv("./_drafts/#{ filename }", "./_posts/#{new_file_name}")
+end

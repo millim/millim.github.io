@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require "erb"
+new_name = ARGV[0]
+if new_name.nil?
+  puts "给个名字"
+  return 
+end
+
+
+erb = ERB.new %q{---
+layout: post
+title: <%= new_name %>
+categories: [demo]
+published: true
+tags: [demo]
+date: <%= Time.now.strftime('%Y-%m-%d') %>
+---
+}
+
+File.open("./_drafts/#{new_name}.md", "w") do |f|
+  f.puts erb.result
+end
