@@ -3,7 +3,7 @@ layout: post
 title: gitlab-ci设置ssh-key
 categories: [技术]
 published: true
-tags: [gitlab,ci]
+tags: [Gitlab]
 date: 2019-11-01
 ---
 

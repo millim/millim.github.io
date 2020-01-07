@@ -3,7 +3,7 @@ layout: post
 title: 记一次服务器调优(goroutine和tcp连接)
 categories: [技术]
 published: true
-tags: [golang,tcp]
+tags: [Golang,Tcp]
 date: 2019-12-19
 ---
 

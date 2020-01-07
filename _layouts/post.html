@@ -41,4 +41,10 @@ layout: default
     appId: 'lIPC84ThIaJtCIMFnlF3fgsT-gzGzoHsz',
     appKey: 'uOm6wn1qFEAJ0qmdCPvnxNJr'
   })
+
+  $(document).ready(function () {
+    $('a[href^="http"]').each(function () {
+      $(this).attr('target', '_blank');
+    });
+  });
 </script>
