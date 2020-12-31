@@ -11,7 +11,7 @@ title: 首页
       <div class="row-content">
         <div class="least-content">{{ post.date | date: "%Y年%m月%d日" }}</div>
         <h4 class="list-group-item-heading">
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a href="{{ post.url | prepend: site.baseurl }}.html">{{ post.title }}</a>
         </h4>
         <p class="list-group-item-text">
           {{ post.subhead | strip_html | truncatewords: 20 }}

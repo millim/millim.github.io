@@ -34,17 +34,3 @@ layout: default
     {% endfor %}
   </ul>
 </div>
-<div id="vcomments"></div>
-<script>
-  new Valine({
-    el: '#vcomments',
-    appId: 'lIPC84ThIaJtCIMFnlF3fgsT-gzGzoHsz',
-    appKey: 'uOm6wn1qFEAJ0qmdCPvnxNJr'
-  })
-
-  $(document).ready(function () {
-    $('a[href^="http"]').each(function () {
-      $(this).attr('target', '_blank');
-    });
-  });
-</script>

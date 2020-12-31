@@ -17,5 +17,4 @@ permalink: /about/
 
 ### 联系方式
 
-邮箱1: <oblivion.millim@gmail.com>
-邮箱2: <237092624@qq.com>
+<oblivion.millim@gmail.com>
