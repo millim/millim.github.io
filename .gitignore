@@ -4,3 +4,4 @@ _site
 .tempcode
 .idea
 *.sh
+.jekyll-cache
