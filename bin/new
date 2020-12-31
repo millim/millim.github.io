@@ -4,9 +4,17 @@ require "erb"
 new_name = ARGV[0]
 if new_name.nil?
   puts "给个名字"
-  return 
+  return
 end
 
+
+
+id = 0
+File.open(File.join(__dir__, '../', 'id'), 'r+') do |f|
+  a = f.readline
+  id = a.to_i + rand(20) + 1
+  f.pwrite id, 0
+end
 
 erb = ERB.new %q{---
 layout: post
@@ -15,6 +23,7 @@ categories: [demo]
 published: true
 tags: [demo]
 date: <%= Time.now.strftime('%Y-%m-%d') %>
+id: <%= id %>
 ---
 }
 
