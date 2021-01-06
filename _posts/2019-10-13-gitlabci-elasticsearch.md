@@ -5,7 +5,7 @@ categories: [技术]
 published: true
 tags: [gitlab,ci,docker]
 date: 2019-10-13
-id: 1070
+bid: 1070
 ---
 
 __Elasticsearch__ 记作 __es__, 自从升级到7.x版本后,发现单个 __es__ 是无法正常启动的(因为默认要求配置集群啥的),但是这个不是问题!

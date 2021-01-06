@@ -1,0 +1,94 @@
+<div class="comment-line">
+  <h3 style="margin-bottom: 0;margin-top: 0">评论</h3>
+  <button class="comment-add" onclick="javascript:showComment()">添加评论</button>
+</div>
+<div class="comment-root" style="display: none">
+  <div class="comment-line">
+    <div>
+      <label>昵称：</label>
+      <input id="nick_name" type="text" />
+    </div>
+    <div>
+      <label>邮箱：</label>
+      <input id="email" type="text" />
+    </div>
+    <input id="bid" type="hidden" value="{{ include.comment_id }}"  />
+    <input id="content" type="hidden" value=""  />
+    <div>
+      <button class="comment-commit" onclick="javascript:commit()">提 交</button>
+    </div>
+  </div>
+  <div id="editor" class="pell"></div>
+</div>
+<div id="comments" class="comment-root">
+</div>
+<script type="application/javascript">
+  pell.init({
+    element: document.getElementById("editor"),
+    actions: ["bold", "italic", "underline", "strikethrough", "heading1", "heading2",
+      "paragraph", "quote", "olist", "ulist", "code", "line"],
+    onChange: html => {
+      setContent(html)
+    }
+  })
+
+  function showComment(){
+    $(".comment-root").show()
+  }
+
+  function setContent(html){
+    $("#content").val(html)
+  }
+
+  function getComment(){
+    let bid = $("#bid").val()
+    $.ajax({
+      url: "{{site.apiHost}}/api/blogs/comments",
+      data: {
+        id: bid
+      },
+      success: (res) => {
+        $.each(res.comments, (_ , item) => {
+          $("#comments").append(`
+          <div class="comment-box">
+            <div class="comment-line">
+              <label>
+                ${item.nick_name||item.email}${item.email === "" ? "" : `(${item.email})`} ${(new
+          Date(item.created_at)).format("yyyy-MM-dd hh:mm")}
+              </label>
+            </div>
+            <div class="comment-once">
+              ${item.message}
+            </div>
+          </div>
+`)
+        })
+      }
+    })
+  }
+  getComment()
+
+  function commit(){
+    let nick_name = $("#nick_name").val()
+    let bid = $("#bid").val()
+    let email = $("#email").val()
+    let content = $("#content").val()
+    $.ajax({
+      url: "{{site.apiHost}}/api/blogs/comments",
+      type: "POST",
+      data: {
+        id: bid,
+        message: content,
+        email: email,
+        nick_name: nick_name
+      },
+      success:() => {
+        window.location.reload()
+      },
+      error:() => {
+        alert("error")
+      }
+    })
+
+  }
+</script>

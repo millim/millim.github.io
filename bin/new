@@ -10,7 +10,7 @@ end
 
 
 id = 0
-File.open(File.join(__dir__, '../', 'id'), 'r+') do |f|
+File.open(File.join(__dir__, '../', 'bid'), 'r+') do |f|
   a = f.readline
   id = a.to_i + rand(20) + 1
   f.pwrite id, 0
@@ -23,7 +23,7 @@ categories: [demo]
 published: true
 tags: [demo]
 date: <%= Time.now.strftime('%Y-%m-%d') %>
-id: <%= id %>
+bid: <%= id %>
 ---
 }
 
